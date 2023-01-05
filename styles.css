@@ -1,0 +1,1203 @@
+/* Global styles.
+This will apply to a set of generic 
+Html elements or the body as a whole.
+*/
+
+/*
+Set a margin of zero to the top and bottom side of the body,
+and a margin of 20px to the left and right side of the body,
+
+ */
+
+ 
+body {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 0;
+    margin-right: 0px;
+    padding: 0px;
+    /* border: 1px solid; */
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing:2px;
+    overflow: auto;
+}
+
+/* set a margin of zero at every corner of the web page's header */
+header {
+    margin: 0px;
+    /* overflow: auto; */
+    /* border: 1px solid; */
+}
+
+/*
+A overflow fixing for the floating navbar.
+The navbar will stop floating outside its parent even
+if it's bigger than it in size.
+ */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+/*
+remove the underline from every anchor Html element,
+a color same to that of their parent,
+align their text content to the center,
+
+*/
+a {
+    text-decoration: none;
+    color:inherit;
+    text-align: center;
+}
+
+hr {
+    margin: 5% 5%;
+    color: #104368;
+}
+
+/* Each input field on this page.
+Will have bottom margin. :-)
+ */
+input {
+    margin-bottom: 5px;
+}
+
+
+/* 
+Medium devices (tablets, 768px and down)
+*/
+@media only screen and (max-width: 900px) {
+    /* set the hamburger's container postion,
+       then an inline display property.Then a cursor effect.
+    */
+    .hamburger-container {
+        /* border: 1px solid; */
+        float: right;
+        display: inline;
+        cursor: pointer;
+    }
+
+    /* Give the icon bar a 100% max width,
+    background color and content overflow property.
+    Also added margins and border radius*/
+    .icon-bar {
+        /* border: 1px solid; */
+        padding: 5px;
+        margin: 1px;
+        border-radius: 4px;
+        max-width: 100%;
+        background-color: rgb(213, 228, 222);
+        overflow: auto;
+    }
+
+    /*
+     Make the menu icon,
+     set each hamburger bar a width of 35px,
+     a height, a backgroundColor
+     and margin for spacing between each.
+     Also sets a transition effect for the
+     transforming to be defined.
+     */
+    .hamburger1, .hamburger2, .hamburger3 {
+        width: 35px;
+        height: 5px;
+        background-color: #104368;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    /* 
+    Styling a switchable class (.change).
+    Will have effect upon clicking the 
+    hamgurger bar, after using JS to create 
+    the class "change".
+
+    .This style rotates the upper and lower bars,
+    while fading off the middle bar. :-).
+    */
+            
+    .change .hamburger1 {
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+
+    .change .hamburger2 {
+        opacity: 0;
+    }
+
+    .change .hamburger3 {
+        transform: rotate(45deg) translate(-8px,-8px); 
+    }
+
+    /*
+    Displays off the logo or navbar here
+    */
+    .brand, .navbar-container  {
+        display: none;
+    }
+
+    /*
+    Set the slided sidebar's position
+    relative to the viewport(browser's size), 
+    width of 300px (suitable for tablets :-) ),
+    same height as viewport, background color and
+    a transitioning effect :-)
+    */
+    #sidebar {
+        position: fixed;
+        top:0px;
+        left:-300px;
+        width:300px;
+        height: 100vh;
+        background-color: #041b2b;
+        transition: 0.4s;
+    }
+
+    /* 
+    Style for another switchable class (.active),
+    */
+    #sidebar.active { 
+        left:0px;
+    }
+     
+    /* 
+    Set the position, top margin and left padding
+    of every unordered list of the sidebar. 
+    */
+    #sidebar ul {
+        position: relative;
+        margin-top: 30px;
+        padding-left: 0px;
+    }   
+    
+    /* 
+    Set a width, padding, a non bullet list
+    styling and a display property of "inline-block",
+    to every list of any unordered list of the parent 
+    sidebar as above.
+
+    Google "CSS selectors for more" :-)
+     */
+    #sidebar ul li {
+        list-style: none;
+        display: inline-block;
+        width:80%;
+        padding: 10px 30px;
+    }
+    
+    /* 
+    changes the background color of each list above when the 
+    mouse icon goes over them.
+     */
+    #sidebar ul li:hover {
+        background-color: #d5e4de;
+
+    }
+
+    /* remove the underline, add a color,
+    background color, font size,
+    letter spacing and transition effect to 
+    each link of the the list above.
+     */
+    #sidebar ul li a {
+        text-decoration: none;
+        color: rgb(182, 178, 178);
+        background-color: inherit;
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        transition: 0.4s;
+    }
+
+    /* The dropdown language preferences button.
+    add a color, remove its border,
+    add some padding, width of 100% that of its parent,
+    font size ...
+     */
+    .dropdwon-lang-btn {
+        color: #fff;
+        border: none;
+
+        padding: 10px 30px;
+        text-align: left;
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        width: 100%;
+        background-color:inherit;
+    }
+
+    /* the options shown when the above is clicked. */
+    .dropdown-lang-options {
+        padding: 10px 40px;
+        display: none;
+        transition: 0.8s;
+    }
+
+    /* To the paragraphs that make the above,
+    aligns its text content to the left,
+    adds a font size, a cursor effect,
+    adds color ...
+     */
+    .dropdown-lang-options p {
+        text-align: left;
+        font-size: 1.5em;
+        line-height: 1.5;
+        cursor: pointer;
+        user-select: none;
+        color: #fff;
+    }
+
+    /*
+    added this twice, will remove this junk css code later :-).
+
+    .dropdown-lang-options {
+        display: none;
+        transition: 0.8s;
+    } */
+
+
+    /* A new switchable class.
+    This is for the langauage options, when the
+    the langauage preference button (LPB)is clicked.
+    */
+    .drop-lang-active {
+        display: block;
+    }
+    
+    /* Hovering effect to the LPB and
+    paragraphs which make the language options.
+     */
+    .dropdwon-lang-btn:hover, .dropdown-lang-options p:hover {
+        background-color: #d5e4de;
+        color:#000;
+    }
+    
+    /* The text which shows up on the LPB,
+    (changes to selected language option).
+    
+    This keeps it adjacent to the icon on the right. */
+    #btn-text{ 
+        display: inline;
+    }
+
+    /* 
+    The brief profile section (showcase or so),
+    adding it a height and margins.
+     */
+    section.showcase {
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        /* border: 1px solid; */
+        height: 120vh;
+    }
+
+    /* 
+    A Container of the showcase contents, both
+    top and down.
+     */
+    .showcase .row  {
+        /* border: 1px solid; */
+        height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+
+    }
+
+    /* 
+    The text and download button at the bottom of the showcase
+    area.
+    Aligning its contents to the center.
+     */
+    .text-and-download-button-container {
+        /* border: 1px solid; */
+        text-align: center;
+    }
+
+    /* 
+    The h1 text.
+    changing its font size,
+    adding some padding,
+     */
+    .self-present {
+        /* border: 1px solid; */
+        /* height: 100px; */
+        font-size: 3em;
+        padding:0% 5%;
+        color: #041724;
+    }
+
+    /*
+    The <p> text after the h1 text above.
+    Adding some padding,
+     */
+    #self-present-paragraph {
+        padding: 0% 5%;
+
+    }
+
+    /* 
+    The button to download my resume.
+    setting its width, font size,
+    background color, no border,
+    ...
+     */
+    #download-resume-button {
+        border: none;
+        border-radius: 4px;
+        padding: 10px;
+        font-size: 100%;
+        width: 70%;
+        background-color: #d5e4de;
+        transition: 0.4s;
+
+    }
+
+    /*
+     A hovering effect to the above button
+     */
+    #download-resume-button:hover {
+        background-color: #041b2b;
+        color: #fff;
+    }
+
+    /*
+     The avatar image on the right.
+     adding some margins, changing its width...
+     
+     The "user-select:none" makes it unselectable.
+
+     NB: Seems not to work ?, help me please :-)
+     */
+    #avatar-image {
+        margin: 0% 5%;
+        width: 90%;
+        height: auto;
+        transition: 0.4s;
+        user-select: none;
+    }
+
+    
+    /* The second section */
+    section.About-section {
+        margin-top: 50px;
+        margin-left: 5%;
+        margin-right: 5%;
+        /* border: 2px solid; */
+        height: 120vh;
+    }
+
+    /* The first and only child of the section above */
+    section.About-section > div {
+        /* border: 1px solid blue; */
+        height: inherit;
+        display: flex;
+        flex-flow: column;
+        transform-origin: all 0.4s;
+    }
+
+    /* Profile statement */
+    #profile-statement {
+        /* border: 1px solid; */
+        text-align: justify;
+        font-size: 1.1em;
+        transition: all 0.4s;
+
+    }
+
+    /* Skills, projects and others area */
+    .skills-projects-and-others {
+        position: relative;
+        /* border: 2px solid red; */
+        height: 85%;
+        text-align: center;
+    }
+
+    /* skills container */
+    .skills {
+        /* border: 1px solid; */
+        height: 70%;
+        padding:5%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        
+    }
+
+    /* First set of skills */
+    .skills-set-one {
+        /* border: 1px solid; */
+        height:40%;
+        position: relative;
+    }
+
+    /* skill one in the first set of skills */
+    .skill-one {
+        /* border: 1px solid; */
+        user-select: none;
+    }
+
+    /* skill two in the second set of skills */
+    .skill-two {
+        /* border: 1px solid; */
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+
+    /* Second set of skills */
+    .skills-set-two {
+        /* border: 1px solid; */
+        height:40%;
+        position: relative;
+    }
+
+    /* skill three in the second set of skills just above */
+    .skill-three {
+        /* border: 1px solid; */
+        user-select: none;
+    }
+
+    /* skill four in the second set of skills */
+    .skill-four {
+        /* border: 1px solid; */
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+
+
+    /* skill level container for each skills in the two skills set above */
+    .progressbar {
+        /* border: 1px solid red; */
+        height: 30px;
+        width: 100%;
+        background-color: #d5e4de;
+    }
+
+    /* skill level for each skills in the two skills set above */
+    .loader {
+        background-color: #041724;
+        width: 100%;
+        height: inherit;
+    }
+
+    /* Static skill level for each skill */
+    #loader1 {
+        width: 50%;
+    }
+
+    #loader2 {
+        width: 50%;
+    }
+
+    #loader3 {
+        width: 50%;
+    }
+
+    #loader4 {
+        width: 70%;
+    }
+
+
+    /* Projects and others container */
+    .projects-and-others {
+        display: flex;
+        justify-content: space-around;
+        /* border: 1px solid red; */
+        color: #fff;
+        background-color: #041724;
+        position: absolute;
+        bottom: 0px;
+        left: 0.5%;
+        width:99%;
+    }
+
+    /* Projects, internships div blocks */
+    .projects, .internhips {
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+
+    }
+
+    /* Number of projects and number of internships done. */
+    #project-amount , #internships-number {
+        font-size: 2.2em;
+    }
+
+
+    /* Removing the about image from tablets and mobile devices */
+    #about-image {
+        display: none;
+    }
+
+
+     /* Contact section. */
+     section.contact-section {
+        /* border: 1px solid; */
+        margin-left: 5%;
+        margin-right: 5%;
+        height:100vh;
+    }
+
+    /* Map and submit form container */
+    .map-and-submit-formm-container {
+        /* border: 1px solid red; */
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        height: inherit;
+    }
+
+     /* Google maps iframe for location info */
+     .map {
+        /* border: 1px solid blue; */
+        width: 100%;
+        height: 50%;
+        transition:all  0.4s;
+        color: #fff;
+        background-color: #041724;
+        text-align: center;
+    }
+
+    /* Aligning the my mail address,
+    and send mail text at the left */
+    #send-message-text, #mail-address {
+        text-align: left;
+        padding-left: 3%;
+    }
+
+
+    /* Custom submit form */
+    .submit-custom-form {
+        /* border: 1px solid; */
+        width: 100%;
+        height: 50%;
+        transition: 0.4s;
+        text-align: center;
+
+    }
+
+    .submit-form-itself {
+        /* border: 1px solid; */
+        user-select: none;
+    }
+
+    /* set the width of input fields. */
+    #username, #mail, #message {
+        width: 90%;
+        padding:1%;
+        margin-bottom: 10px;
+        transition:all 0.4s;
+        border-radius: 4px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 2px solid #041724;
+
+    }
+
+    /* The submit button */
+    #send-button {
+        border: none;
+        width: 80%;
+        padding:4px;
+        border-radius: 4px;
+        color: #041724;
+        background-color: #d5e4de;
+        font-size: 1.3em;
+        transition: 0.4s;
+    }
+
+
+    /* Hovering effect on button above */
+    #send-button:hover {
+        color:#fff;
+        background-color: #041724;
+    }
+
+    footer {
+        /* border: 1px solid red; */
+        position: relative;
+        margin-top: 30px;
+        width:100%;
+        height:60vh;
+        background-color: #041724;
+    }
+
+    /* Social references container */
+    .social-references {
+        position: absolute;
+        right: 0px;
+        width: 40%;
+        height:100px;
+        border:1px solid #d5e4de;
+        padding-top: 10%;
+        padding-left: 5%;
+    }
+
+    .facebook, .linked-in, .github {
+        width: 5%;
+        height: 5%;
+        display: inline-block;
+        background-color:#d5e4de;
+        margin-left: 20px;
+        padding-left: 20px;
+    }
+
+
+
+    
+}
+
+/* #########################################################################################################################
+    #######################################################################################################################
+Large devices (desktops, 769px and up)
+*/
+@media only screen and (min-width: 900px) {
+
+    /*
+    the brand "Hyp3r" container which displays
+    at the top left of the screen.
+    removes every margin it has.
+     */
+    .brand {
+        border: 1px solid;
+        margin: 0;
+        width: 15%;
+        cursor: pointer;
+        color: #fff;
+        background-color: #041724;
+        border:4px;
+        text-align: center;
+    }
+
+    /* The text "Hyp3r" itself.
+    adds a color, removes any margin ...
+     */
+    .brand-txt {
+        font-family: Arial, Helvetica, sans-serif;
+        display:inline-block;
+        margin: 0px;
+        /* color: #104368; */
+    }
+
+    
+    /* The navbar container.
+    adds a width of 80% its parent,
+    a top, left margin of 5px with
+    no top and bottom margin.
+    Also make it float on the right of
+    the screen.
+    Google "CSS float property" for more :-)
+     */
+    .navbar-container {
+        /* border: 2px solid #0f5c0f; */
+        margin: 5px 0px; 
+        width: 80%;
+        float: right;
+    }
+    
+    
+    /* the options shown when the language preferences button (LPB) is clicked. */
+    .dropdown-lang-options {
+        display: none;
+        transition: 0.4s;
+    }
+
+    /* The text which shows up on the LPB,
+    (changes to selected language option).
+    
+    This keeps it adjacent to the icon on the right. */
+    #btn-text-lg{
+        display: inline;
+    }
+
+
+    /* remove the underline, add a color,
+    background color, font size,
+    letter spacing, transition effect,
+    width ... (... refer the others not written.) 
+    of each link .
+     */
+    li.nav-item{
+        list-style: none;
+        display: inline-block;
+        font-size:1.3em;
+        font-weight: 400;
+        width:16%;
+        text-align: center;
+        color: #041b2b;
+        background-color: #d5e4de;
+        cursor: pointer;
+        position: relative;
+        left:15%;  
+        /* border: 1px solid; */
+        border-radius: 4px;
+        transition: 0.5s;
+    }
+
+    /* A hovering effect to each link. */
+    li.nav-item:hover {
+        padding: 5px;
+        color: #fff;
+        background-color:#041724 ;
+    }
+    
+    /* The container of the language preference button 
+    together with the language options.
+     */
+    .lang-preferences  {
+        /* border: 1px solid; */
+        list-style: none;
+        display: inline-block;
+        font-size: 20px;
+        width:16%;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        left:15%; 
+        border-radius: 4px;
+        transition: 0.5s;       
+    }
+
+
+    /* 
+     A new switchable class.
+    This is for the langauage options, when the
+    the langauage preference button (LPB)is clicked
+     */
+    .drop-lang-active-lg {
+        display: block;
+        position: absolute;
+        left: 30%;
+
+    }
+
+    /* The english language preference paragraph. */
+    #en-lg {
+        background-color:#d5e4de;
+        color: #041b2b;
+        padding: 10px;
+        transition: 0.4s;
+    }
+
+    /* The french language preference paragraph. */
+    #fr-lg {
+        background-color:#d5e4de;
+        color: #041b2b;
+        padding: 10px;
+        transition: 0.4s;
+    }
+
+    /* Hovering effects to the two above. */
+    #en-lg:hover, #fr-lg:hover {
+        background-color: #041b2b;
+        color:#fff
+    }
+
+
+    /* The navigation links bar itself.
+    Contains the "Home, Projects, ... , langauage preference button."
+    */
+    ul.navbar-nav {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /* The language preference button itself. */
+    button.dropdwon-lang-btn-lg {
+        border: none;
+        margin: 0px;
+        font-size: 20px;
+        background-color: inherit;
+        cursor: pointer;
+    }
+
+    /* 
+    Displays off the side to be shown
+    for tablets and mobile devices.
+     */
+    #sidebar {
+        display: none;
+    }
+
+    /* Start of section one after the navigation bar.
+    The showcase area :-). */
+    
+    section.showcase {
+        /* border: 1px solid; */
+        margin-top:60px;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 120vh;
+    }
+
+     /* 
+    A Container of the showcase contents, both
+    left and right.
+     */
+    .showcase .row {
+        height: inherit;
+        display: flex;
+        flex-direction: row;
+        transition: 0.4s;
+    }
+
+    
+    /* 
+    The text and download button on the left of the showcase
+    area.
+
+     */
+    .text-and-download-button-container {
+        /* border:1px solid; */
+        padding-top:10%;
+        padding-left: 5%;
+        width: 45%;
+        transition: 0.4s;
+    }
+
+    /* 
+    The h1 text.
+    changing its font size,
+    adding some margin, color...
+
+     */
+    .self-present {
+        text-align: left ;
+        font-size: 60px;
+        /* border: 1px solid; */
+        margin: 0px;
+        margin-right: 30px;
+        transition: 0.4s;
+        color: #02101a;
+    }
+
+    /*
+    The <p> text after the h1 text above.
+    Adding some to margin to it,
+     */
+    #self-present-paragraph {
+        margin-top: 5%;
+        font-size: 1.1em;
+    }
+
+    /* 
+    The button to download my resume.
+    setting its width, font size,
+    background color, no border,
+    ...
+     */
+    #download-resume-button {
+        margin: 0px;
+        margin-top: 30%;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 20px;
+        background-color:#d5e4de;
+        transition: 0.7s;
+    }
+
+    /* 
+    Changes the text color and background color
+    of the above button when your mouse goes over it.
+     */
+    #download-resume-button:hover {
+        color:#fff;
+        background-color: #041724;
+    }
+    
+
+    /* The avatar's container (image's container). */
+    .avatar-image-container {
+        /* border: 1px solid; */
+        width: 50%;
+        transition: 0.4s;
+        padding: 10% 0px;
+        user-select:none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    /*
+     The avatar image on the right.
+     adding some margins, changing its width...
+     
+     The "user-select:none" makes it unselectable.
+
+     NB: Seems not to work ?, help me please :-)
+     */
+    #avatar-image {
+        border-radius: 8px;
+        transition: 0.4s;
+        max-width: 100%;
+        width:100%;
+        height:450px;
+        user-select:none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+
+    /* fades the image when user passes mouse over it */
+    #avatar-image:hover {
+        opacity: 0.9    ;
+    }
+
+
+    /*  
+    The about section.
+    */
+    section.About-section {
+        /* border: 1px solid; */
+        height: 120vh;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    section.About-section > div {
+        /* border: 1p   x solid blue; */
+        height: inherit;
+        display: flex;
+        flex-flow:row;
+    }
+
+    .about-image-and-profile-statement {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between  ;
+        /* border: 2px solid red; */
+        width: 50%;
+        transition:all 0.4s;
+    }
+
+    #about-image {
+        /* border: 1px solid; */
+        height: 60%;
+        width: 100%;
+        transition: all 0.4s;
+    }
+
+    #profile-statement {
+        /* border: 1px solid; */
+        margin-bottom: 10%;
+        font-size: 1.1em;
+        text-align: justify;
+        padding: 1%;
+        transition: all 0.4s;
+    }
+
+
+
+
+    .skills-projects-and-others {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        /* border: 2px solid rgb(10, 41, 3); */
+        width: 50%;
+        transition: all 0.4s;
+    }
+
+    /* container of skills set */
+    .skills {
+        /* border: 1px solid; */
+        display: flex;
+        flex-flow:column;
+        justify-content: space-around;
+        height: 60%;
+        width: 80%;
+        margin-left: 10%;
+        transition: all 0.4s;
+    }
+
+    /* First set of skills */
+    .skills-set-one {
+        /* border: 1px solid; */
+        transition: 0.4s;
+        display: flex;
+        justify-content: space-around;
+        height: 40%;
+    }
+
+    /* Every progress bar in both set one skills and two*/
+    .progressbar {
+        /* border: 1px solid #041724; */
+        background-color: #d5e4de;
+        height:10px;
+        width:100%;
+        position:absolute;
+        bottom: 40%;
+    }
+
+    /* The loadbar for each skill in each skill set */
+    .loader {
+        width: 1%;
+        height: inherit;
+        background-color: #041724;
+    }
+
+    /* Static width of each loaders. */
+    #loader1 {
+        width: 50%;
+    }
+
+    #loader2 {
+        width: 50%;
+    }
+
+    #loader3 {
+        width: 50%;
+    }
+
+    #loader4 {
+        width: 70%;
+    }
+
+    /* First skill of set one above.
+    Sorry for this complexity....
+     */
+     .skill-one, .skill-two, .skill-three, .skill-four {
+        /* border: 1px solid; */
+        width: 40%;
+        position: relative;
+     }
+
+
+    /* Second set of skills */
+    .skills-set-two {
+        /* border: 1px solid; */
+        transition: 0.4s;
+        display: flex;
+        justify-content: space-around;
+        height: 40%;
+    }
+
+    .projects-and-others {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        width: 70%;
+        border: 1px solid;
+        margin-bottom: 10%;
+        margin-left: 15%;
+        color: #fff;
+        background-color: #041724;
+        transition: all 0.4s;
+    }
+
+    .projects, .internhips {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #project-amount , #internships-number {
+        font-size: 2em;
+    }
+
+    #projects-text , #internships-text {
+        font-size: 1.1em;
+    }
+
+    
+    /* Contact section. */
+    section.contact-section {
+        /* border: 1px solid; */
+        margin-left: 2%;
+        margin-right: 2%;
+        height:120vh;
+    }
+
+    /* Map and submit form container */
+    .map-and-submit-formm-container {
+        /* border: 1px solid red; */
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        height: inherit;
+    }
+
+
+    /* Google maps iframe for location info */
+    .map {
+        /* border: 1px solid blue; */
+        width: 55%;
+        height: 80%;
+        margin-top: 5%;
+        margin-right:2%;
+        transition:all  0.4s;
+        color: #fff;
+        background-color: #041724;
+    }
+
+    /* Custom submit form */
+    .submit-custom-form {
+        /* border: 1px solid; */
+        width: 40%;
+        height: 80%;
+        margin-top: 5%;
+        transition: 0.4s;
+
+    }
+
+    /* set the width of input fields. */
+    #username, #mail, #message {
+        width: 90%;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        padding:10px;
+        transition:all 0.4s;
+        border-radius: 4px;
+    }
+
+    /* The submit button */
+    #send-button {
+        border: none;
+        width: 50%;
+        padding:10px;
+        border-radius: 4px;
+        color: #041724;
+        background-color: #d5e4de;
+        font-size: 1.3em;
+        transition: 0.4s;
+    }
+
+
+    /* Hovering effect on button above */
+    #send-button:hover {
+        color:#fff;
+        background-color: #041724;
+    }
+
+
+    footer {
+        /* border: 1px solid red; */
+        position: relative;
+        width:100%;
+        height:60vh;
+        background-color: #041724;
+    }
+    
+    /* Social references container */
+    .social-references {
+        position: absolute;
+        right: 0px;
+        width: 40%;
+        height:100px;
+        border:1px solid #d5e4de;
+        padding-top: 10%;
+        padding-left: 5%;
+    }
+
+    .facebook, .linked-in, .github {
+        width: 5%;
+        height: 5%;
+        display: inline-block;
+        background-color:#d5e4de;
+        margin-left: 20px;
+        padding-left: 20px;
+    }
+    
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hans' Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+    <!-- <script src="./scripts.js"></script> -->
+
+</head>
+<body>
+    <!-- An update of my demo portfolio at
+    https://hansportfolio.w3spaces.com. This 
+    will rectify the problem faced with the "slidebar" 
+    Also this will include a multilangual feature. Thanks
+    for checking this. :-) -->
+    <main>
+        <header class="clearfix">
+            <!-- header contents for tablets and mobile devices -->
+            <div id="sidebar">
+                <ul>
+                <!-- A button for language preferences -->
+                <button class="dropdwon-lang-btn" id="dropdown-btn"><p id="btn-text">English</p><i id="langicon"> icon</i></button>
+                <div class="dropdown-lang-options" id="dropdown-lang-options">
+                    <p id="en">English</p>
+                    <p id="fr">French</p>
+                </div>
+
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects-and-others">Projects</a></li>
+                    <li><a href="#about-area">About</a></li>
+                    <li><a href="#contact-area">Contacts</a></li>
+                </ul>
+            </div>
+
+            <div class="icon-bar">
+                <!-- The icon hamburger menu -->
+                <div class="hamburger-container" id="toggle" onclick="cross(this)">
+                    <div class="hamburger1"></div>
+                    <div class="hamburger2"></div>
+                    <div class="hamburger3"></div>
+                </div>
+            </div>
+            <!-- End of header contents for tablets and mobile devices -->
+
+            <!-- header contents for PCs and large devices -->
+            <h1 class="brand" >
+                <a href="#"><p class="brand-txt" id="Hy">Hy</p><p class="brand-txt" id="p3r">p3r</p></a>
+            </h1>
+            <!-- The logo or brand and navbar goes here -->
+            <div class="navbar-container">
+    
+                <ul class="navbar-nav">
+                    <!-- Other nav links -->
+                    <li class="nav-item"><a href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#projects-and-others">Projects</a></li>
+                    <li class="nav-item"><a href="#about-area">About</a></li>
+                    <li class="nav-item"><a href="#contact-area">Contacts</a></li>
+
+                    <li class="lang-preferences">
+                        <!-- A button for language preferences -->
+                        <button class="dropdwon-lang-btn-lg" id="dropdown-btn-lg"><p id="btn-text-lg">EN</p><i id="langicon-lg"> icon</i></button>
+                        <div class="dropdown-lang-options" id="dropdown-lang-options-lg">
+                            <p class="lang-preferences-hover-bgcolor" id="en-lg">EN</p>
+                            <p class="lang-preferences-hover-bgcolor" id="fr-lg">FR</p>
+                        </div>
+                    </li>
+    
+                </ul>
+            </div>
+            <!-- End of header contents for PCs and large devices -->
+        </header>
+
+        <!-- The showcase area. -->
+        <section class="showcase section-one" id="home">
+            <!-- the container of the self presentation text, download resume button and
+            avatar image -->
+            <div class="row">
+                
+                <div class="text-and-download-button-container column1">
+                    <h1 class="self-present">Hi, am Hans Mueghe Kum</h1>
+                    <p id="self-present-paragraph">A Junior Front-end Developer.</p>
+                    <button id="download-resume-button"><i class="fa fa-download">icon</i>Here's my resume</button>
+                </div>
+                <!-- the avatar image -->
+                <div class="avatar-image-container">
+                    <img id="avatar-image" src="/statics/avatar.png" alt="My Avatar">
+                </div>
+
+            </div>
+        </section>
+        <hr>
+        <!-- The About section -->
+        <section class="About-section" id="about-area">
+            <!-- A container of the about section image, profile statement, some skills
+            and others -->
+            <div class="row">
+
+                <!-- A container for the about image and profile statement -->
+                <div class="about-image-and-profile-statement">
+                    <img id="about-image" src="statics/6794631.jpg" alt="About Me">
+                    <p id="profile-statement">
+                        As a young and smart junior front-end web developer. I am
+                        looking forward in becoming verse in front-end web
+                        development then moving to full stack development. Also, i
+                        am passionate in using tech to solve daily problems
+                    </p>
+                </div>
+
+                <!-- A container for skills, project and others -->
+                <div class="skills-projects-and-others">
+                    <!-- A container for skills-->
+                    <div class="skills">
+
+                        <!-- set one of skills -->
+                        <div class="skills-set-one">
+                            
+                            <!-- skill one of set one -->
+                            <div class="skill-one">
+                                <p>HTML, CSS, JS</p>
+                                <div class="progressbar" id="progressbar1">
+                                    <div class="loader" id="loader1"></div>
+                                </div>
+                            </div>
+
+                            <!-- skill two of set one -->
+                            <div class="skill-two">
+                                <p>Python</p>
+                                <div class="progressbar" id="progressbar2">
+                                    <div class="loader" id="loader2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Set two  of skills -->
+                        <div class="skills-set-two">
+
+                            <!-- skill three of set two -->
+                            <div class="skill-three">
+                                <p>Boostrap, ReactJS, Django</p>
+                                <div class="progressbar" id="progressbar3">
+                                    <div class="loader" id="loader3"></div>
+                                </div>
+                            </div>
+
+                            <!-- skill four of set two -->
+                            <div class="skill-four">
+                                <p>English, French</p>
+                                <div class="progressbar" id="progressbar4">
+                                    <div class="loader" id="loader4"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <!-- A container for projects and others. -->
+                    <div class="projects-and-others" id="projects-and-others">
+                        <div class="projects">
+                            <p id="projects-text">Projects</p><span id="project-amount">+1</span>
+                        </div>
+                        <div class="internhips">
+                            <p id="internships-text">Recent-Internships</p><span id="internships-number">+2</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <hr>
+        <!-- Contact section
+        Contains location map, a mail message submit form -->
+        <section class="contact-section" id="contact-area">
+
+            <!-- map and submit form container -->
+            <div class="map-and-submit-formm-container">
+                <!-- Map -->
+                <div class="map">
+                    iframe will be here for google map.
+                </div>
+
+                <!--Custom submit form with some paragraphs-->
+                <div class="submit-custom-form">
+                    <!-- My email address -->
+                    <p id="mail-address"><i class="fa fa-envelope" id="email-icon">icon</i>hansmueghe@gmail.com</p>
+                    
+                    <!-- Message me paragraph -->
+                    <p id="send-message-text">Send me a message!</p>
+
+                    <!-- submit form actually goes here -->
+                    <div class="submit-form-itself">
+                        <label for="username">Your Name : </label>
+                        <br/>
+                        <input type="text" id="username" value=""/>
+                        <br/>
+                        <label for="mail">How do i reach you (your email) ? : </label>
+                        <br/>
+                        <input type="text" id="mail" value=""/>
+                        <br/>
+                        <label for="message">Your message :</label>
+                        <br/>
+                        <input type="text" id="message" value=""/>
+                        <br/>
+                        <button id="send-button"><i class="fa fa-aeroplane">icon</i>SEND</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="social-references">
+                <div class="linked-in"></div>
+                <div class="facebook"></div>
+                <div class="github"></div>
+            </div>
+        </footer>
+        
+    </main>
+
+    <!-- loading JS module after body content -->
+    <script src="./scripts.js"></script>
+</body>
+</html>
