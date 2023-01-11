@@ -1,2 +1,3 @@
 # myPortfolio
-A simple demo portfolio
+A simple demo portfolio.
+Thanks for your visit.
