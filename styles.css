@@ -1128,8 +1128,6 @@ Large devices (desktops, 769px and up)
         margin-top: 5%;
         margin-right:2%;
         transition:all  0.4s;
-        color: #fff;
-        background-color: #041724;
     }
 
     /* Custom submit form */
@@ -1154,23 +1152,36 @@ Large devices (desktops, 769px and up)
 
     /* The submit button */
     #send-button {
+        position: relative;
         border: none;
-        width: 50%;
+        width: 20%;
         padding:10px;
         border-radius: 4px;
         color: #041724;
         background-color: #d5e4de;
         font-size: 1.3em;
-        transition: 0.4s;
+        text-align: left;
+        transition: 0.5s;
     }
 
-
-    /* Hovering effect on button above */
+    /*
+    Hovering effect on button above.
+    changes the background color, the width
+    and centers its contents.
+    */
     #send-button:hover {
         color:#fff;
         background-color: #041724;
+        width: 50%;
+        text-align: center;
     }
 
+    /* The paper plane icon of the send button.
+    Adding some right padding to it.*/
+    i.fa-paper-plane {
+        padding-right: 5%;
+
+    }
 
     footer {
         /* border: 1px solid red; */
@@ -1187,17 +1198,30 @@ Large devices (desktops, 769px and up)
         width: 40%;
         height:100px;
         border:1px solid #d5e4de;
-        padding-top: 10%;
+        padding-top: 5%;
         padding-left: 5%;
     }
 
+    /*
+    Each social link icon container in the footer 
+    (all in a social reference container) :-).
+     */
     .facebook, .linked-in, .github {
         width: 5%;
-        height: 5%;
+        height: 50%;
         display: inline-block;
-        background-color:#d5e4de;
         margin-left: 20px;
         padding-left: 20px;
+        color: white;
+        border: 1px solid;
+    }
+
+    /*
+    Here is the social icons themselves.
+    Each is a font awesome icon.
+    */
+    div > a > i.fa-brands {
+        font-size:25px;
     }
     
 }
