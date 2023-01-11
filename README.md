@@ -1,2 +1,2 @@
-# My demo porfolio
-Here's my portfolio
+# myPortfolio
+A simple demo portfolio
