@@ -9,7 +9,6 @@ and a margin of 20px to the left and right side of the body,
 
  */
 
- 
 body {
     margin-top: 20px;
     margin-bottom: 0px;
@@ -270,6 +269,11 @@ Medium devices (tablets, 768px and down)
         background-color: #d5e4de;
         color:#000;
     }
+
+    /* Language preference icon */
+    #langicon {
+        padding-left: 20px;
+    }
     
     /* The text which shows up on the LPB,
     (changes to selected language option).
@@ -347,7 +351,7 @@ Medium devices (tablets, 768px and down)
         border-radius: 4px;
         padding: 10px;
         font-size: 100%;
-        width: 70%;
+        width: 60%;
         background-color: #d5e4de;
         transition: 0.4s;
 
@@ -359,7 +363,16 @@ Medium devices (tablets, 768px and down)
     #download-resume-button:hover {
         background-color: #041b2b;
         color: #fff;
+        width: 70%;
     }
+
+     /*
+     The download resume button's download icon.
+    From fontAwesome CDN (Just Google CDN in web development :-) ).
+     */
+     button > i.fa-download {
+        padding-right: 5px;
+     }
 
     /*
      The avatar image on the right.
@@ -601,7 +614,7 @@ Medium devices (tablets, 768px and down)
     /* The submit button */
     #send-button {
         border: none;
-        width: 80%;
+        width: 70%;
         padding:4px;
         border-radius: 4px;
         color: #041724;
@@ -615,6 +628,7 @@ Medium devices (tablets, 768px and down)
     #send-button:hover {
         color:#fff;
         background-color: #041724;
+        width: 80%;
     }
 
     footer {
@@ -628,25 +642,35 @@ Medium devices (tablets, 768px and down)
 
     /* Social references container */
     .social-references {
-        position: absolute;
-        right: 0px;
-        width: 40%;
-        height:100px;
-        border:1px solid #d5e4de;
+        width: 100%;
+        height:50%;
+        /* border:1px solid #d5e4de; */
         padding-top: 10%;
-        padding-left: 5%;
+        text-align: center;
+        color: #fff;
     }
 
     .facebook, .linked-in, .github {
         width: 5%;
         height: 5%;
         display: inline-block;
-        background-color:#d5e4de;
-        margin-left: 20px;
-        padding-left: 20px;
+        /* background-color:#d5e4de; */
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
+    /*
+    Here is the social icons themselves.
+    Each is a font awesome icon.
+    */
+    div > a > i.fa-brands {
+        font-size:25px;
+    }
 
+    /* The copyright bottom text */
+    #copyright-text {
+        padding:10%;
+    }
 
     
 }
@@ -797,7 +821,11 @@ Large devices (desktops, 769px and up)
         color:#fff
     }
 
-
+    /* The language icon  */
+    #langicon-lg {
+        padding-left: 7px;
+        color: #041724;
+    }
     /* The navigation links bar itself.
     Contains the "Home, Projects, ... , langauage preference button."
     */
@@ -898,7 +926,16 @@ Large devices (desktops, 769px and up)
         border-radius: 4px;
         font-size: 20px;
         background-color:#d5e4de;
-        transition: 0.7s;
+        transition: 0.5s;
+        text-align: left;
+        width:50%;
+    }
+
+    /* Adjusting widht for small PC screens */
+    @media only screen and (max-width:1055px) {
+        #download-resume-button {
+            width:60%;
+        }
     }
 
     /* 
@@ -908,7 +945,17 @@ Large devices (desktops, 769px and up)
     #download-resume-button:hover {
         color:#fff;
         background-color: #041724;
+        width:80%;
+        text-align: center;
     }
+
+    /*
+     The download resume button's download icon.
+    From fontAwesome CDN (Just Google CDN in web development :-) ).
+     */
+     button > i.fa-download {
+        padding-right: 5%;
+     }
     
 
     /* The avatar's container (image's container). */
@@ -1154,7 +1201,7 @@ Large devices (desktops, 769px and up)
     #send-button {
         position: relative;
         border: none;
-        width: 20%;
+        width: 30%;
         padding:10px;
         border-radius: 4px;
         color: #041724;
@@ -1178,7 +1225,7 @@ Large devices (desktops, 769px and up)
 
     /* The paper plane icon of the send button.
     Adding some right padding to it.*/
-    i.fa-paper-plane {
+    button > i.fa-paper-plane {
         padding-right: 5%;
 
     }
@@ -1197,9 +1244,10 @@ Large devices (desktops, 769px and up)
         right: 0px;
         width: 40%;
         height:100px;
-        border:1px solid #d5e4de;
+        /* border:1px solid #d5e4de; */
         padding-top: 5%;
         padding-left: 5%;
+        color: #fff;
     }
 
     /*
@@ -1211,9 +1259,9 @@ Large devices (desktops, 769px and up)
         height: 50%;
         display: inline-block;
         margin-left: 20px;
-        padding-left: 20px;
+        padding-left: 10%;
         color: white;
-        border: 1px solid;
+        /* border: 1px solid; */
     }
 
     /*
@@ -1223,5 +1271,6 @@ Large devices (desktops, 769px and up)
     div > a > i.fa-brands {
         font-size:25px;
     }
+    
     
 }
